@@ -20,6 +20,7 @@ pending_commands = {
     "valve": None,
 }
 
+# ESP32 posts sensor data here every 2 seconds
 @app.route("/update", methods=["POST"])
 def update():
     data = request.get_json(silent=True)
